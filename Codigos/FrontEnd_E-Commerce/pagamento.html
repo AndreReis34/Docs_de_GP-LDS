@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formas de Pagamento</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 10px;
+        display: flex;
+    }
+
+    .out{
+        padding: 30px 450px;
+    }
+
+    .search-bar {
+        padding: 10px 200px;
+        margin: 20px;
+        display: flex;
+    }
+
+    h2{
+        background-color: #333;
+        color: #fff;
+        padding: 30px 40px;
+        margin: -5px 0px   ;
+        text-align: center;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    input[type="radio"] {
+        margin-right: 10px;
+    }
+
+    .p-button {
+        padding: 10px 20px;
+        border: none;
+        background-color: #007bff;
+        color: #fff;
+        font-size: 1em;
+        cursor: pointer;
+        border-radius: 20px;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+</style>
+</head>
+<body>
+<header>
+    <h1 >TechMart</h1>
+    <div class="search-bar">
+        <input type="text" placeholder="Pesquisar">
+        <button type="submit"><a href="pesquisa.html">Pesquisar</a></button>
+    </div>
+    <a class="out" href="#">Logout</a>
+</header>
+
+<h2>Escolha a forma de pagamento</h2>
+
+<div class="container">
+    <form id="payment-form">
+        <label>
+            <input type="radio" name="payment" value="credit-card"> Cartão de Crédito
+        </label>
+        <label>
+            <input type="radio" name="payment" value="debit-card"> Cartão de Débito
+        </label>
+        <label>
+            <input type="radio" name="payment" value="paypal"> PayPal
+        </label>
+        <label>
+            <input type="radio" name="payment" value="pix"> PIX
+        </label>
+        <button class="p-button" type="submit">Pagar</button>
+    </form>
+</div>
+
+<script>
+    const form = document.getElementById('payment-form');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        const selectedPayments = Array.from(form.querySelectorAll('input[name="payment"]:checked'))
+                                      .map(checkbox => checkbox.value);
+        alert(`Pagamento realizado com sucesso usando: ${selectedPayments.join(', ')}`);
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Perfil do Produto</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 10px;
+        display: flex;
+    }
+
+    header a{
+        padding: 30px 450px;
+    }
+
+    .search-bar {
+        padding: 10px 200px;
+        margin: 20px;
+        display: flex;
+    }
+
+
+    .logo {
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+
+    .product-container {
+        display: flex;
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .product-image {
+        flex: 1;
+        margin-right: 20px;
+    }
+
+    .product-details {
+        flex: 2;
+    }
+
+    .product-name {
+        font-size: 1.5em;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .product-rating {
+        color: #f39c12; /* cor amarela para a nota */
+        margin-bottom: 10px;
+    }
+
+    .product-price {
+        font-size: 1.2em;
+        margin-bottom: 10px;
+    }
+
+    .product-features {
+        margin-bottom: 20px;
+    }
+
+    .ad-button {
+        padding: 10px 20px;
+        border: None;
+        background-color: #007bff;
+        color: #fff;
+        font-size: 1em;
+        cursor: pointer;
+        border-radius: 20px;
+    }
+
+    .ad-button {
+        padding: 10px 20px;
+        border: None;
+        background-color: #6EB8FC;
+        color: #fff;
+        font-size: 1em;
+        cursor: pointer;
+        border-radius: 20px;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+</style>
+</head>
+<body>
+<header>
+    <h1 >TechMart</h1>
+    <div class="search-bar">
+        <input type="text" placeholder="Pesquisar">
+        <button class="p-button" type="submit">Pesquisar</button>
+    </div>
+    <a href="#">Logout</a>
+</header>
+
+<div class="product-container">
+    <div class="product-image">
+        <img src="https://via.placeholder.com/400" alt="Product Image">
+    </div>
+    <div class="product-details">
+        <div class="product-name">Nome do Produto</div>
+        <div class="product-rating">Avaliação: ★★★★☆(9)</div>
+        <div class="product-price">R$ 99,99</div>
+        <button class="ad-button"><a href="pagamento.html">Comprar</a></button>
+        <button class="ad-button">Adiconar ao Carrinho</button>
+        <div class="product-features">
+            <h3>Características:</h3>
+            <ul>
+                <li>Característica 1</li>
+                <li>Característica 2</li>
+                <li>Característica 3</li>
+                <li>Característica 4</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
